@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Página Principal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Cerrar Sesión</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card *ngIf="role === 'conductor'">
+    <ion-card-header>
+      <ion-card-title>Opciones para Conductores</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="goToCreateTrip()">Crear Viaje</ion-button>
+    </ion-card-content>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card *ngIf="role === 'pasajero'">
+    <ion-card-header>
+      <ion-card-title>Opciones para Pasajeros</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="searchTrips()">Buscar Viajes</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

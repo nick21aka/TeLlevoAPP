@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>bateria camara</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 [style.color]="batterycolor">Bateria: {{ batterylevel }} %</h1>
+  <ion-button (click)="openCamera()">Abrir la camara</ion-button>
+  <div *ngIf="imageUrl">
+    <img [src]="imageUrl" alt="foto desde la camara">
+ </div>
+</ion-content>

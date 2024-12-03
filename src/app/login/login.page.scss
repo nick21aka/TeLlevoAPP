@@ -1,0 +1,68 @@
+ion-content {
+  --background: #f8f9fa; /* Fondo claro */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  
+  padding: 20px;
+}
+.logo-icon {
+  width: 20px; /* Ancho reducido */
+  height: 20px; /* Altura reducida */
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  vertical-align: middle; /* Alinea la imagen con el texto */
+}
+
+
+ion-card {
+  width: 100%;
+  max-width: 400px; /* Ancho máximo */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  background: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+}
+
+ion-card-content {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  gap: 15px; /* Espaciado entre los elementos */
+}
+
+ion-item {
+  --background: transparent; /* Fondo transparente para los inputs */
+  --border-color: #007bff; /* Color de los bordes de los inputs */
+}
+
+ion-label {
+  font-size: 0.9rem;
+  color: #333; /* Texto oscuro */
+}
+
+ion-input {
+  font-size: 1rem; /* Tamaño de fuente de los inputs */
+  color: #495057; /* Color del texto en los inputs */
+}
+
+ion-button {
+  --background: #007bff; /* Fondo azul formal */
+  --color: #ffffff; /* Texto blanco */
+  --border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente del botón */
+  font-weight: bold; /* Texto en negrita */
+}
+
+ion-button[routerLink] {
+  --background: #6c757d; /* Fondo gris para el botón "Registrarse" */
+}
+
+@media (max-width: 600px) {
+  ion-card {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+  }
+
+  ion-button {
+    font-size: 0.9rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+  }
+}
